@@ -1,0 +1,10 @@
+{
+    "typeCheckingMode": "basic", 
+    "exclude": [
+      "**/tests/*",
+      "**/migrations/*"
+    ],
+    "reportMissingImports": false, 
+    "reportMissingTypeStubs": false,
+    "reportGeneralTypeIssues": false
+  }

@@ -1,0 +1,58 @@
+[project]
+name = "lumyn"
+version = "0.0.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "Subroto Kumar", email = "subroto.kumar@capgemini.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "agent",
+    "icecream>=2.1.3",
+    "pydantic>=2.10.3",
+    "pydantic-settings>=2.7.0",
+    "graphrag-utils",
+    "pymupdf>=1.25.3",
+    "graphrag-service",
+]
+
+[tool.uv.workspace]
+members = [
+    # Apps
+    "apps/aws",
+    "apps/community",
+    "apps/storage",
+    "apps/azure-svc",
+    # Libs
+    "libs/core",
+    "libs/shared",
+    "libs/opensearch",
+    "libs/object-storage",
+    "libs/backend",
+    "libs/generation",
+    "libs/azure-evaluation",
+    "libs/vectorstore",  
+    "libs/azure-ai-search-service", 
+    "libs/custom-secrets",
+    # Docs
+    "docs", "libs/client", "libs/azure-ai-search-service", "libs/custom-secrets", "libs/graphrag-service", "libs/graphrag-utils",  "libs/agent", "libs/flowgen",]
+
+[tool.uv.sources]
+backend = { workspace = true }
+core = { workspace = true }
+object-storage = { workspace = true }
+opensearch = { workspace = true }
+shared = { workspace = true }
+agent = { workspace = true }
+vectorstore = { workspace = true }
+graphrag-utils = { workspace = true }
+graphrag-service = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "commitizen>=3.31.0",
+    "isort>=5.13.2",
+    "pytest>=8.3.3",
+    "watchfiles>=0.24.0",
+    "ruff>=0.7.4",
+    "pre-commit>=4.0.1",
+]

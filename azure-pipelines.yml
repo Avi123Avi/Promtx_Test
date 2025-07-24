@@ -1,0 +1,97 @@
+trigger: none
+ 
+pool:
+  name: 'genai-linux-agent'
+ 
+variables:
+  containerRegistry: 'promptxpy.azurecr.io'
+  imageName: 'lumyn'
+  sshServiceConnection: 'lumyn-onprem-service-connection'
+  dockerFilePath: './docker/community.Dockerfile'
+  tag: '$(Build.BuildId)'
+  registryServiceConnection: 'promptx-svc-conn'
+  buildContext: '.'
+ 
+stages:
+- stage: Build_And_Push
+  jobs:
+  - job: Docker_Build
+    steps:
+    - script: |
+        sudo apt-get update
+        sudo apt-get install -y ca-certificates curl gnupg
+        sudo install -m 0755 -d /etc/apt/keyrings
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+        sudo chmod a+r /etc/apt/keyrings/docker.gpg
+ 
+       
+        echo \
+          "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+          "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+          sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+       
+       
+        sudo apt-get update
+        sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+       
+       
+        sudo usermod -aG docker $USER
+       
+       
+        sudo systemctl enable docker
+        sudo systemctl start docker
+       
+        sudo chmod 666 /var/run/docker.sock
+       
+       
+        docker --version
+        docker ps
+      displayName: 'Install Docker and Configure Permissions'
+     
+    - task: Docker@2
+      displayName: 'Build And Push Docker Image'
+      inputs:
+        containerRegistry: '$(registryServiceConnection)'
+        repository: '$(imageName)'
+        dockerfile: '$(dockerFilePath)'
+        command: 'buildAndPush'
+        tags: |
+          $(tag)
+        buildContext: '$(buildContext)'
+ 
+- stage: Deploy_To_VM
+  dependsOn: Build_And_Push
+  jobs:
+  - job: Deploy
+    steps:
+    - task: SSH@0
+      displayName: 'Deploy docker image to VM'
+      inputs:
+        sshEndpoint: '$(sshServiceConnection)'
+        runOptions: 'inline'
+        inline: |
+          docker login promptxpy.azurecr.io -u PromptXPy -p Id9m+oG/fOPhPlWmRXEk7Kr1SHFYIHkSz/K3Y1XZw++ACRAdZZvR
+         
+         
+          CONTAINER_ID=$(docker ps -q --filter publish=8007)
+          if [ ! -z "$CONTAINER_ID" ]; then
+            echo "Stopping container using port 8007: $CONTAINER_ID"
+            docker stop $CONTAINER_ID
+            docker rm $CONTAINER_ID
+          fi
+         
+         
+          CONTAINER_NAME=$(docker ps -aqf "name=lumyn")
+          if [ ! -z "$CONTAINER_NAME" ]; then
+            echo "Stopping and removing container with the name lumyn: $CONTAINER_NAME"
+            docker stop $CONTAINER_NAME
+            docker rm $CONTAINER_NAME
+          fi
+         
+         
+          docker pull $(containerRegistry)/$(imageName):$(tag)
+         
+          docker run -d --network opensearch-net -p 8007:8083 \
+            --name $(imageName) \
+            $(containerRegistry)/$(imageName):$(tag)
+ 

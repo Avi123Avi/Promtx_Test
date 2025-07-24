@@ -1,0 +1,23 @@
+  # repos:
+  # - repo: https://github.com/pre-commit/pre-commit-hooks
+  #   rev: v3.2.0
+  #   hooks:
+  #   -   id: trailing-whitesace
+  #   -   id: end-of-file-fixer
+  #   -   id: check-yaml
+  #   -   id: check-added-large-files
+  # - repo: https://github.com/astral-sh/uv-pre-commit
+  #   # uv version.
+  #   rev: 0.5.4
+  #   hooks:
+  #     # Compile requirements
+  #     - id: pip-compile
+  #       args: [requirements.in, -o, requirements.txt]
+  # - repo: https://github.com/astral-sh/uv-pre-commit
+  #   rev: 0.5.4
+  #   hooks:
+  #     - id: uv-lock
+  # - repo: https://github.com/astral-sh/uv-pre-commit
+  #   rev: 0.5.4
+  #   hooks:
+  #     - id: uv-export

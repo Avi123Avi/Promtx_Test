@@ -1,0 +1,17 @@
+{
+  "name": "lumyn",
+  "scripts": {
+    "clean": "uv run scripts/clean.py",
+    "commit": "uv run scripts/commit.py",
+    "container": "uv run scripts/container.py",
+    "server": "uv run scripts/server.py",
+    "add": "uv run scripts/add.py",
+    "remove": "uv run scripts/remove.py",
+    "sync": "uv run scripts/sync.py",
+    "up": "docker-compose up -f dev.compose.yml",
+    "down": "docker-compose down -f dev.compose.yml"
+  },
+  "dependencies": {
+    "lumyn": "file:"
+  }
+}
