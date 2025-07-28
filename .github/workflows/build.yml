@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0  # Required for accurate Sonar analysis
 
       - name: Run SonarScanner CLI
-        shell: powershell
+        shell: cmd
         run: |
           sonar-scanner.bat `
             -Dsonar.projectKey=Avi123Avi_Promtx_Test_abaeb944-6d84-4a33-b914-42a52dee4f72
