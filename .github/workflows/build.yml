@@ -20,12 +20,12 @@ jobs:
 
       - name: Run SonarScanner CLI
         shell: cmd
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
           sonar-scanner.bat ^
             -Dsonar.projectKey=Avi123Avi_Promtx_Test_abaeb944-6d84-4a33-b914-42a52dee4f72 ^
             -Dsonar.sources=. ^
-            -Dsonar.host.url=${{ SONAR_HOST_URL }} ^
-            -Dsonar.login=${{ SONAR_TOKEN }}
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+            -Dsonar.host.url=${{ env.SONAR_HOST_URL }} ^
+            -Dsonar.login=${{ env.SONAR_TOKEN }}
