@@ -22,7 +22,7 @@ jobs:
         shell: powershell
         run: |
           sonar-scanner.bat `
-            -Dsonar.projectKey=Promtx_Test `
+            -Dsonar.projectKey=Avi123Avi_Promtx_Test_abaeb944-6d84-4a33-b914-42a52dee4f72 `
             -Dsonar.sources=. `
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} `
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
