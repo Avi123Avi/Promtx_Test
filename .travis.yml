@@ -1,0 +1,54 @@
+sudo: false
+language: php
+dist: trusty
+php:
+  - 7.1
+  - 5.6
+  - 5.5
+
+env:
+  - MAGENTO_VERSION=magento-mirror-1.9.4.1
+  - MAGENTO_VERSION=magento-mirror-1.9.3.10
+  - MAGENTO_VERSION=magento-mirror-1.8.1.0
+  - MAGENTO_VERSION=ecocode-mirror-1.7.0.2
+
+matrix:
+  include:
+    - php: 7.1
+      env: MAGENTO_VERSION=magento-mirror-1.9.4.1 NO_DEPS=1
+
+services:
+  - mysql
+
+# Deletes build directory and adds new tools
+install:
+  # Clean build directory
+  - rm -rf build; mkdir build; cd build
+
+  # install modman
+  - bash < <(wget -q --no-check-certificate -O - https://raw.github.com/colinmollenhour/modman/master/modman-installer)
+  - modman --version
+
+  # install n98-magerun
+  - wget --no-check-certificate https://files.magerun.net/n98-magerun.phar
+  - chmod +x n98-magerun.phar
+  - ./n98-magerun.phar --version
+
+  - export PATH=$PWD:$PATH
+
+before_script:
+  - cd $TRAVIS_BUILD_DIR
+  - ./travis-install.sh
+
+script:
+  - cd $TRAVIS_BUILD_DIR
+  - mkdir -p build/logs
+
+  - cd $TRAVIS_BUILD_DIR/build/magento
+  - cp $TRAVIS_BUILD_DIR/phpunit-prod.xml.dist .
+  - cp $TRAVIS_BUILD_DIR/phpunit-dev.xml.dist .
+  - php $TRAVIS_BUILD_DIR/util/phpunit.phar -c phpunit-prod.xml.dist && php $TRAVIS_BUILD_DIR/util/phpunit.phar -c phpunit-dev.xml.dist --coverage-clover $TRAVIS_BUILD_DIR/build/logs/clover.xml
+
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - travis_retry $TRAVIS_BUILD_DIR/util/vendor/bin/php-coveralls -v

@@ -1,0 +1,11 @@
+exclude_patterns:
+    - 'dev.php'
+    - '*.css.phtml'
+    - '*.js.phtml'
+
+rules:
+    php.psr1:
+        enabled: false
+    #no way to get around this with the magento autoloader
+    php.silenced_error:
+        enabled: false
