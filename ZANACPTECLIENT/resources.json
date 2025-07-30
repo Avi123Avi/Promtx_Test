@@ -1,0 +1,53 @@
+{
+    "resources": [
+        {
+            "name": "changes/id_1532419264516_80_propertyChange.change"
+        },
+        {
+            "name": "changes/id_1538552624944_156_propertyChange.change"
+        },
+        {
+            "name": "changes/id_1538552627283_159_propertyChange.change"
+        },
+        {
+            "name": "extensions/controllers/ListReportExtension.controller.js"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "annotations/annotations.xml"
+        },
+        {
+            "name": "i18n/ListReport/ZC_AnaCpteClient/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/ObjectPage/ZC_AnaCpteClient/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/ZC_ANACPTECLIENT_CDS_VAN.xml"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+	"fileName": "id_1538552624944_156_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "reporting_compte_client.Component",
+	"packageName": "ZSD",
+	"content": {
+		"property": "showFullScreenButton",
+		"oldValue": false,
+		"newValue": true
+	},
+	"selector": {
+		"id": "reporting_compte_client::sap.suite.ui.generic.template.ListReport.view.ListReport::ZC_AnaCpteClient--listReport",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/reporting_compte_client/changes/",
+	"creation": "2018-10-03T07:43:48.717Z",
+	"originalLanguage": "FR",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.52.18"
+	},
+	"dependentSelector": {}
+}

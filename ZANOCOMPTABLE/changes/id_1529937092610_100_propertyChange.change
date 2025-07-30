@@ -1,0 +1,31 @@
+{
+	"fileName": "id_1529937092610_100_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "reporting_suivi_ano_comptables.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "useExportToExcel",
+		"oldValue": false,
+		"newValue": true
+	},
+	"selector": {
+		"id": "reporting_suivi_ano_comptables::sap.suite.ui.generic.template.ListReport.view.ListReport::ZC_SuiviAnoCptables--listReport",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/reporting_suivi_ano_comptables/changes/",
+	"creation": "2018-06-25T14:31:35.179Z",
+	"originalLanguage": "FR",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.44.31"
+	},
+	"dependentSelector": {}
+}

@@ -1,0 +1,94 @@
+{
+    "resources": [
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "annotations/annotations.xml"
+        },
+        {
+            "name": "changes/changes-bundle.json"
+        },
+        {
+            "name": "changes/id_1528188281979_86_propertyChange.change"
+        },
+        {
+            "name": "extensions/controllers/ListReportExtension.controller.js"
+        },
+        {
+            "name": "i18n/AnalyticalListPage/ZC_AnalyseCRV/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/ObjectPage/ZC_AnalyseCRV/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "localService/ZC_ANALYSECRV_CDS_VAN.xml"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "tmp/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "tmp/Component.js"
+        },
+        {
+            "name": "tmp/annotations/annotations.xml"
+        },
+        {
+            "name": "tmp/changes/changes-bundle.json"
+        },
+        {
+            "name": "tmp/changes/id_1528188281979_86_propertyChange.change"
+        },
+        {
+            "name": "tmp/extensions/controllers/ListReportExtension.controller.js"
+        },
+        {
+            "name": "tmp/i18n/AnalyticalListPage/ZC_AnalyseCRV/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "tmp/i18n/ObjectPage/ZC_AnalyseCRV/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "tmp/i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "tmp/localService/ZC_ANALYSECRV_CDS_VAN.xml"
+        },
+        {
+            "name": "tmp/localService/metadata.xml"
+        },
+        {
+            "name": "tmp/localService/mockserver.js"
+        },
+        {
+            "name": "tmp/manifest.json"
+        }
+    ]
+}

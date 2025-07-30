@@ -1,0 +1,31 @@
+{
+	"fileName": "id_1540212116178_181_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "reporting_vte_aprvte_agence_depositaire.Component",
+	"packageName": "ZSD",
+	"content": {
+		"property": "showFullScreenButton",
+		"oldValue": false,
+		"newValue": true
+	},
+	"selector": {
+		"id": "reporting_vte_aprvte_agence_depositaire::sap.suite.ui.generic.template.ListReport.view.ListReport::ZC_AgencesEtDepositairesI--listReport",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/reporting_vte_aprvte_agence_depositaire/changes/",
+	"creation": "2018-10-22T12:41:58.917Z",
+	"originalLanguage": "FR",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.44.31"
+	},
+	"dependentSelector": {}
+}

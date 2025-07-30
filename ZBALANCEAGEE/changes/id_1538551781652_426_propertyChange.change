@@ -1,0 +1,36 @@
+{
+	"fileName": "id_1538551781652_426_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "reporting_balance_agee.Component",
+	"packageName": "ZSD",
+	"content": {
+		"property": "selectionMode",
+		"oldValue": "Multi",
+		"newValue": "Single"
+	},
+	"selector": {
+		"id": "reporting_balance_agee::sap.suite.ui.generic.template.ListReport.view.ListReport::ZC_BalanceAgeeResults--analyticalTable",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/reporting_balance_agee/changes/",
+	"creation": "2018-10-03T07:29:44.409Z",
+	"originalLanguage": "FR",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.52.18"
+	},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	}
+}

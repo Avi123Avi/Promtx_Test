@@ -1,0 +1,124 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='ECC')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="sap.com.cds_zc_balanceagee" xml:lang="fr" sap:schema-version="1">
+            <EntityType Name="ZC_BalanceAgeeResult" sap:semantics="aggregate" sap:label="Balance Agee" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false"/>
+                <Property Name="Societe" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:required-in-filter="true" sap:label="Société" sap:value-list="standard"/>
+                <Property Name="CompteGeneral" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Compte général"/>
+                <Property Name="Distributeur" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="NomDistributeur" sap:label="Distributeur"/>
+                <Property Name="NomDistributeur" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Nom dictributeur"/>
+                <Property Name="DateFacture" Type="Edm.DateTime" Precision="0" sap:aggregation-role="dimension" sap:display-format="Date" sap:label="Date facture"/>
+                <Property Name="LibelleClient" Type="Edm.String" MaxLength="35" sap:label="Libellé client"/>
+                <Property Name="GroupeDeCompte" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Groupe de compte"/>
+                <Property Name="GroupeClient" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Groupe de client" sap:value-list="standard"/>
+                <Property Name="Branche" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Branche client" sap:value-list="standard"/>
+                <Property Name="CleGroupe" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Clé du groupe"/>
+                <Property Name="ModePaiement" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Mode de paiement"/>
+                <Property Name="DateEcheance" Type="Edm.String" MaxLength="8" sap:aggregation-role="dimension" sap:display-format="NonNegative" sap:label="Date d''échéance"/>
+                <Property Name="Transporteur" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="NomTransporteur" sap:label="Transporteur"/>
+                <Property Name="NomTransporteur" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Nom transporteur"/>
+                <Property Name="MontantTotal" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant total"/>
+                <Property Name="MontantTotalCreancesEchues" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant total créances échues"/>
+                <Property Name="MontantTotalCreancesNonEchues" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant total créances non échues"/>
+                <Property Name="MttCreance1to30" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant créances échues 1 - 30"/>
+                <Property Name="MttCreance31to60" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant créances échues 31 - 60"/>
+                <Property Name="MttCreance61to90" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant créances échues 61 - 90"/>
+                <Property Name="MttCreance91to180" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant créances échues 91 - 180"/>
+                <Property Name="MttCreance181to1an" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant créances échues 181 - 1 an"/>
+                <Property Name="Client" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="LibelleClient" sap:label="Client"/>
+                <Property Name="MttCreance1anto5ans" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant créances échues 1 an - 5 ans"/>
+                <Property Name="MttCreanceUpTo5ans" Type="Edm.Decimal" Precision="24" Scale="3" sap:aggregation-role="measure" sap:unit="P1848E7C7AFEE8F088662733D3FE5D44C" sap:label="Montant créances échues &gt; 5 ans"/>
+                <Property Name="NumeroFacture" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Numéro de facture" sap:value-list="standard"/>
+                <Property Name="DomaineActivite" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="DomaineActiviteLibelle" sap:label="Domaine d''activité"/>
+                <Property Name="DomaineActiviteLibelle" Type="Edm.String" MaxLength="30" sap:label="Libelle domaine d''activité"/>
+                <Property Name="TypePiece" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:text="TypePieceLibelle" sap:label="Type de pièce" sap:value-list="standard"/>
+                <Property Name="TypePieceLibelle" Type="Edm.String" MaxLength="20" sap:label="Libellé type de pièce"/>
+                <Property Name="CodeCGS" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Code CGS"/>
+                <NavigationProperty Name="to_SocieteF4" Relationship="sap.com.cds_zc_balanceagee.assoc_2DB4D8828A09F1080177C551F003D0C8" FromRole="FromRole_assoc_2DB4D8828A09F1080177C551F003D0C8" ToRole="ToRole_assoc_2DB4D8828A09F1080177C551F003D0C8"/>
+            </EntityType>
+            <EntityType Name="ZC_BalanceAgeeParameters" sap:semantics="parameters" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="p_keydate"/>
+                    <PropertyRef Name="p_NetDueInterval1InDays"/>
+                    <PropertyRef Name="p_NetDueInterval2InDays"/>
+                    <PropertyRef Name="p_NetDueInterval3InDays"/>
+                    <PropertyRef Name="p_NetDueInterval4InDays"/>
+                    <PropertyRef Name="p_NetDueInterval5InDays"/>
+                    <PropertyRef Name="p_NetDueInterval6InDays"/>
+                </Key>
+                <Property Name="p_keydate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:parameter="mandatory" sap:label="Date d'acquisition" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="p_NetDueInterval1InDays" Type="Edm.Int32" Nullable="false" sap:parameter="mandatory" sap:label="Nombre naturel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="p_NetDueInterval2InDays" Type="Edm.Int32" Nullable="false" sap:parameter="mandatory" sap:label="Nombre naturel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="p_NetDueInterval3InDays" Type="Edm.Int32" Nullable="false" sap:parameter="mandatory" sap:label="Nombre naturel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="p_NetDueInterval4InDays" Type="Edm.Int32" Nullable="false" sap:parameter="mandatory" sap:label="Nombre naturel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="p_NetDueInterval5InDays" Type="Edm.Int32" Nullable="false" sap:parameter="mandatory" sap:label="Nombre naturel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="p_NetDueInterval6InDays" Type="Edm.Int32" Nullable="false" sap:parameter="mandatory" sap:label="Nombre naturel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Results" Relationship="sap.com.cds_zc_balanceagee.assoc_E1D29A91E4DEABFA4689502AC044F5E5" FromRole="FromRole_assoc_E1D29A91E4DEABFA4689502AC044F5E5" ToRole="ToRole_assoc_E1D29A91E4DEABFA4689502AC044F5E5"/>
+            </EntityType>
+            <EntityType Name="ZI_CompanyF4Type" sap:label="Value help pour les sociétés" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CompanyCode"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="CompanyCodeName" sap:label="Code société"/>
+                <Property Name="CompanyCodeName" Type="Edm.String" MaxLength="25" sap:label="Société"/>
+            </EntityType>
+            <Association Name="assoc_E1D29A91E4DEABFA4689502AC044F5E5" sap:content-version="1">
+                <End Type="sap.com.cds_zc_balanceagee.ZC_BalanceAgeeParameters" Multiplicity="1" Role="FromRole_assoc_E1D29A91E4DEABFA4689502AC044F5E5"/>
+                <End Type="sap.com.cds_zc_balanceagee.ZC_BalanceAgeeResult" Multiplicity="*" Role="ToRole_assoc_E1D29A91E4DEABFA4689502AC044F5E5"/>
+            </Association>
+            <Association Name="assoc_2DB4D8828A09F1080177C551F003D0C8" sap:content-version="1">
+                <End Type="sap.com.cds_zc_balanceagee.ZC_BalanceAgeeResult" Multiplicity="1" Role="FromRole_assoc_2DB4D8828A09F1080177C551F003D0C8"/>
+                <End Type="sap.com.cds_zc_balanceagee.ZI_CompanyF4Type" Multiplicity="0..1" Role="ToRole_assoc_2DB4D8828A09F1080177C551F003D0C8"/>
+            </Association>
+            <EntityContainer Name="sap_com_cds_zc_balanceagee_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZC_BalanceAgeeResults" EntityType="sap.com.cds_zc_balanceagee.ZC_BalanceAgeeResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:addressable="false" sap:requires-filter="true" sap:content-version="1"/>
+                <EntitySet Name="ZC_BalanceAgee" EntityType="sap.com.cds_zc_balanceagee.ZC_BalanceAgeeParameters" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZI_CompanyF4" EntityType="sap.com.cds_zc_balanceagee.ZI_CompanyF4Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_2DB4D8828A09F1080177C551F003D0C8" Association="sap.com.cds_zc_balanceagee.assoc_2DB4D8828A09F1080177C551F003D0C8" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_BalanceAgeeResults" Role="FromRole_assoc_2DB4D8828A09F1080177C551F003D0C8"/>
+                    <End EntitySet="ZI_CompanyF4" Role="ToRole_assoc_2DB4D8828A09F1080177C551F003D0C8"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_E1D29A91E4DEABFA4689502AC044F5E5" Association="sap.com.cds_zc_balanceagee.assoc_E1D29A91E4DEABFA4689502AC044F5E5" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_BalanceAgee" Role="FromRole_assoc_E1D29A91E4DEABFA4689502AC044F5E5"/>
+                    <End EntitySet="ZC_BalanceAgeeResults" Role="ToRole_assoc_E1D29A91E4DEABFA4689502AC044F5E5"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="sap.com.cds_zc_balanceagee.ZC_BalanceAgeeResult/Societe">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Value help pour les sociétés"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_CompanyF4"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Societe"/>
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCodeName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZC_BALANCEAGEE_CDS/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZC_BALANCEAGEE_CDS/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

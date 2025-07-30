@@ -1,0 +1,102 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "DG2",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "SNCF - DG2"
+    },
+    {
+      "path": "/sap/bc/lrep",
+      "target": {
+        "type": "destination",
+        "name": "DG2",
+        "entryPath": "/sap/bc/lrep"
+      },
+      "description": "DG2"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "preferLocal": true,
+        "entryPath": "/resources",
+        "version": "1.52.9"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/sap/ui5/1/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "preferLocal": true,
+        "version": "1.52.9"
+      },
+      "description": "SAPUI5 dist layer resources"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources",
+        "version": "1.52.9"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources",
+        "version": "1.52.9"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources",
+        "version": "1.52.9"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/",
+      "target": {
+        "type": "application",
+        "name": "flpsandbox",
+        "preferLocal": true
+      },
+      "description": "Subscribed Fiori LaunchPad"
+    },
+    {
+      "path": "/sap/bc/ui5_ui5",
+      "target": {
+        "type": "destination",
+        "name": "DG2",
+        "entryPath": "/sap/bc/ui5_ui5"
+      },
+      "description": "SNCF - DG2"
+    },
+    {
+      "path": "/resources/reporting_suivi_ano_comptables/Component",
+      "target": {
+        "type": "destination",
+        "name": "DG2",
+        "entryPath": "/sap/bc/lrep/flex/data/~0H2mi2xpViMICgAV0SGZCy9ONhE=~/reporting_suivi_ano_comptables.Component",
+        "preferLocal": true
+      },
+      "description": "reporting_suivi_ano_comptables/Component Reuse Library"
+    }
+  ]
+}

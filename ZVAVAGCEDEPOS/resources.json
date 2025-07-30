@@ -1,0 +1,53 @@
+{
+    "resources": [
+        {
+            "name": "changes/id_1540212116178_181_propertyChange.change"
+        },
+        {
+            "name": "changes/id_1540212114846_178_propertyChange.change"
+        },
+        {
+            "name": "changes/id_1540212117799_184_propertyChange.change"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "i18n/ListReport/ZC_AgencesEtDepositaires/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/ObjectPage/ZC_AgencesEtDepositaires/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "localService/ZC_AGENCESETDEPOSITAIRES_CDS_VAN.xml"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "annotations/annotations.xml"
+        },
+        {
+            "name": "extensions/controllers/ListReportExtension.controller.js"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

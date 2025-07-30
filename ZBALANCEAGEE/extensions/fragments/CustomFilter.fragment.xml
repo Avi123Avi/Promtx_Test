@@ -1,0 +1,64 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+	<smartfilterbar:ControlConfiguration key="KeyDate" index="1" label="Date d'exécution" groupId="_BASIC">
+		<smartfilterbar:customControl>
+			<DatePicker	id="BalanceAgee_KeyDate"
+				name="p_keydate"
+				required="true"
+				displayFormat="short"/>
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+	<!--<smartfilterbar:ControlConfiguration key="Interval1" index="2" label="Interval 1" groupId="_BASIC">-->
+	<!--	<smartfilterbar:customControl>-->
+	<!--		<Input-->
+	<!--			id="BalanceAgee_Interval_1"-->
+	<!--			name="p_NetDueInterval1InDays"-->
+	<!--			required="true"-->
+	<!--			value="30"/>-->
+	<!--	</smartfilterbar:customControl>-->
+	<!--</smartfilterbar:ControlConfiguration>-->
+	<!--<smartfilterbar:ControlConfiguration key="Interval2" index="3" label="Interval 2" groupId="_BASIC">-->
+	<!--	<smartfilterbar:customControl>-->
+	<!--		<Input-->
+	<!--			id="BalanceAgee_Interval_2"-->
+	<!--			name="p_NetDueInterval2InDays"-->
+	<!--			required="true"-->
+	<!--			value="60"/>-->
+	<!--	</smartfilterbar:customControl>-->
+	<!--</smartfilterbar:ControlConfiguration>-->
+	<!--<smartfilterbar:ControlConfiguration key="Interval3" index="4" label="Interval 3" groupId="_BASIC">-->
+	<!--	<smartfilterbar:customControl>-->
+	<!--		<Input-->
+	<!--			id="BalanceAgee_Interval_3"-->
+	<!--			name="p_NetDueInterval3InDays"-->
+	<!--			required="true"-->
+	<!--			value="90"/>-->
+	<!--	</smartfilterbar:customControl>-->
+	<!--</smartfilterbar:ControlConfiguration>-->
+	<!--<smartfilterbar:ControlConfiguration key="Interval4" index="5" label="Interval 4" groupId="_BASIC">-->
+	<!--	<smartfilterbar:customControl>-->
+	<!--		<Input-->
+	<!--			id="BalanceAgee_Interval_4"-->
+	<!--			name="p_NetDueInterval4InDays"-->
+	<!--			required="true"-->
+	<!--			value="180"/>-->
+	<!--	</smartfilterbar:customControl>-->
+	<!--</smartfilterbar:ControlConfiguration>-->
+	<!--<smartfilterbar:ControlConfiguration key="Interval5" index="6" label="Interval 5" groupId="_BASIC">-->
+	<!--	<smartfilterbar:customControl>-->
+	<!--		<Input-->
+	<!--			id="BalanceAgee_Interval_5"-->
+	<!--			name="p_NetDueInterval5InDays"-->
+	<!--			required="true"-->
+	<!--			value="365"/>-->
+	<!--	</smartfilterbar:customControl>-->
+	<!--</smartfilterbar:ControlConfiguration>-->
+	<!--<smartfilterbar:ControlConfiguration key="Interval6" index="7" label="Interval 6" groupId="_BASIC">-->
+	<!--	<smartfilterbar:customControl>-->
+	<!--		<Input-->
+	<!--			id="BalanceAgee_Interval_6"-->
+	<!--			name="p_NetDueInterval6InDays"-->
+	<!--			required="true"-->
+	<!--			value="1825"/>-->
+	<!--	</smartfilterbar:customControl>-->
+	<!--</smartfilterbar:ControlConfiguration>-->
+</core:FragmentDefinition>

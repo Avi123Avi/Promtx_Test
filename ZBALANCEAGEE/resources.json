@@ -1,0 +1,58 @@
+{
+    "resources": [
+        {
+            "name": "annotations/annotations.xml"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "localService/ZC_BALANCEAGEE_CDS_VAN.xml"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "fioriHtmlRunner.html"
+        },
+        {
+            "name": "extensions/controllers/ListReportExtension.controller.js"
+        },
+        {
+            "name": "extensions/fragments/CustomFilter.fragment.xml"
+        },
+        {
+            "name": "changes/id_1537799590370_107_propertyChange.change"
+        },
+        {
+            "name": "changes/id_1538551781652_426_propertyChange.change"
+        },
+        {
+            "name": "changes/id_1538551779342_425_propertyChange.change"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "i18n/ListReport/ZC_BalanceAgeeResults/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "extended_runnable_file.html"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

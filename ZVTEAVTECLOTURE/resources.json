@@ -1,0 +1,49 @@
+{
+    "resources": [
+        {
+            "name": "annotations/annotations.xml"
+        },
+        {
+            "name": "changes/id_1538558408819_245_propertyChange.change"
+        },
+        {
+            "name": "changes/id_1538558413087_247_propertyChange.change"
+        },
+        {
+            "name": "changes/id_1538558411060_246_propertyChange.change"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "extensions/controllers/ListReportExtension.controller.js"
+        },
+        {
+            "name": "i18n/ListReport/ZC_VteAVteCloture/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "localService/ZC_VTEAVTECLOTURE_CDS_VAN.xml"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+	"Component-preload.js": 1564555811000,
+	"Component.js": 1564406547000,
+	"extended_runnable_file.html": 1564482169000,
+	"manifest-bundle.zip": 1564406547000,
+	"manifest.json": 1564481965000,
+	"neo-app.json": 1564406551000,
+	"resources.json": 1564553704000,
+	"sap-ui-cachebuster-info.json": 1564553664000,
+	"annotations/annotations.xml": 1564406547000,
+	"changes/changes-bundle.json": 1564558045000,
+	"changes/changes-beforeExport.json": 1564558046000,
+	"i18n/i18n.properties": 1564406547000,
+	"localService/ZC_ANALYSECRV_CDS_VAN.xml": 1564555070000,
+	"localService/metadata.xml": 1564406547000,
+	"localService/mockserver.js": 1564406547000,
+	"extensions/controllers/ListReportExtension.controller.js": 1564582567000,
+	"i18n/AnalyticalListPage/ZC_AnalyseCRV/i18n.properties": 1564554912000,
+	"i18n/ObjectPage/ZC_AnalyseCRV/i18n.properties": 1564554918000
+}

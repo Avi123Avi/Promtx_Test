@@ -1,0 +1,181 @@
+<edmx:Edmx
+    xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='CAR')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='CAR')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='CAR')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./SAP/ZC_ANALYSECRV_CDS/$metadata">
+        <edmx:Include Namespace="ZC_ANALYSECRV_CDS" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema
+            xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zc_analysecrv_cds_van.v1">
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/HeureSeance">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations/>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/Annee">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/Mois">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/PointDeVenteLibelle">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/PosteDeVente">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/TypeEquipementLibelle">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/NumeroRecette">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/NumeroSeance">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/TypeValidation">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/StatutTransaction">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/TypeDeTransaction">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/UserDernTtmtManuel">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/UserDernTtmtManuelNomCplt">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/RubriqueLibelle">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/AJustifierParBCC">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/CompteComptable">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/Modele">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/CodePrestataire">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/CodePrestation">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/Suppleance">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/DateEmission">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/MontantTitreInitial">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/NumeroTitre">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/NumeroBon">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/NombreBon">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/DateBon">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/NumDossierVoyage">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/MotifDSV">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/MontantVente">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/DeviseTransaction">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/MoyenPaiementValeur">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/MoyenPaiementDevise">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/to_Agent">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/to_Rub">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/to_TypeEquipmt">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType/to_Pdv">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZC_ANALYSECRV_CDS.ZC_AnalyseCRVType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="CRV"/>
+                        <PropertyValue Property="TypeNamePlural" String="CRV"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BCC"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PointDeVente"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="NumeroRecette"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DateSeance"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="NumeroSeance"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MontantVente"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MoyenPaiementValeur"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>PointDeVente</PropertyPath>
+                        <PropertyPath>DateSeance</PropertyPath>
+                        <PropertyPath>DateSaisie</PropertyPath>
+                        <PropertyPath>BCC</PropertyPath>
+                        <PropertyPath>TypeEquipement</PropertyPath>
+                        <PropertyPath>Agent</PropertyPath>
+                        <PropertyPath>DateTraitementBCC</PropertyPath>
+                        <PropertyPath>Rubrique</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

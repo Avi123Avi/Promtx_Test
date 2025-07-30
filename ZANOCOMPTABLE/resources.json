@@ -1,0 +1,43 @@
+{
+    "resources": [
+        {
+            "name": "i18n/ListReport/ZC_SuiviAnoCptables/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "changes/id_1529937092610_100_propertyChange.change"
+        },
+                {
+            "name": "changes/id_1529937092611_100_propertyChange.change"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "annotations/annotations.xml"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "extensions/controllers/ListReportExtension.controller.js"
+        }
+    ]
+}

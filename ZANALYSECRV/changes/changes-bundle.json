@@ -1,0 +1,31 @@
+[{
+	"fileName": "id_1528188281979_86_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "reporting_analyse_crv.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "useExportToExcel",
+		"oldValue": false,
+		"newValue": true
+	},
+	"selector": {
+		"id": "reporting_analyse_crv::sap.suite.ui.generic.template.ListReport.view.ListReport::ZC_AnalyseCRV--listReport",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/reporting_analyse_crv/changes/",
+	"creation": "2018-06-05T08:44:48.550Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.52.9"
+	},
+	"dependentSelector": {}
+}]

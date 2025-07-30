@@ -1,0 +1,31 @@
+{
+	"fileName": "id_1529682990322_65_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "reporting_orphelins.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "useExportToExcel",
+		"oldValue": false,
+		"newValue": true
+	},
+	"selector": {
+		"id": "reporting_orphelins::sap.suite.ui.generic.template.ListReport.view.ListReport::ZC_SuiviOrphelins--listReport",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/reporting_orphelins/changes/",
+	"creation": "2018-06-22T15:56:35.699Z",
+	"originalLanguage": "FR",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.44.31"
+	},
+	"dependentSelector": {}
+}

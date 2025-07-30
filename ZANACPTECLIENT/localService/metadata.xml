@@ -1,0 +1,53 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='ECC')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="sap.com.cds_zc_anacpteclient" xml:lang="fr" sap:schema-version="1">
+            <EntityType Name="ZC_AnaCpteClientType" sap:semantics="aggregate" sap:label="Analyse compte client" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false"/>
+                <Property Name="NumeroClient" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:filter-restriction="multi-value" sap:label="Numéro client"/>
+                <Property Name="Branche" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Branche" sap:value-list="standard"/>
+                <Property Name="SIRET" Type="Edm.String" MaxLength="16" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="SIRET"/>
+                <Property Name="SIREN" Type="Edm.String" MaxLength="11" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="SIREN"/>
+                <Property Name="NumTVA" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Numéro identification TVA"/>
+                <Property Name="Contrat" Type="Edm.String" MaxLength="11" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Contrat"/>
+                <Property Name="Pays" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Code pays"/>
+                <Property Name="LibellePays" Type="Edm.String" MaxLength="50" sap:aggregation-role="dimension" sap:label="Pays"/>
+                <Property Name="Region" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Code région"/>
+                <Property Name="LibelleRegion" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension" sap:label="Région"/>
+                <Property Name="GroupeClient" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Groupe de client" sap:value-list="standard"/>
+                <Property Name="NomClient" Type="Edm.String" MaxLength="35" sap:aggregation-role="dimension" sap:label="Nom client"/>
+                <Property Name="Devise" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Devise" sap:value-list="standard" sap:semantics="currency-code"/>
+                <Property Name="ClasseRisque" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Classe de risque"/>
+                <Property Name="ConditionPaiement" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Conditions de paiement"/>
+                <Property Name="CodeInteretRetard" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Code intérêts de retard"/>
+                <Property Name="ModePaiement" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Modes de paiement"/>
+                <Property Name="Exercice" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="NonNegative" sap:filter-restriction="single-value" sap:label="Exercice comptable"/>
+                <Property Name="CA" Type="Edm.Decimal" Precision="14" Scale="3" sap:aggregation-role="measure" sap:label="CA"/>
+                <Property Name="Rue" Type="Edm.String" MaxLength="35" sap:aggregation-role="dimension" sap:label="Rue"/>
+                <Property Name="CodePostal" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Code postal"/>
+                <Property Name="Ville" Type="Edm.String" MaxLength="35" sap:aggregation-role="dimension" sap:label="Ville"/>
+                <Property Name="Telephone" Type="Edm.String" MaxLength="16" sap:aggregation-role="dimension" sap:label="Téléphone"/>
+                <Property Name="CodeLangage" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="Code langue"/>
+                <Property Name="GroupeCompte" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Groupe de compte"/>
+                <Property Name="CleGroupe" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Clé du groupe"/>
+            </EntityType>
+            <EntityContainer Name="sap.com.cds_zc_anacpteclient_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZC_AnaCpteClient" EntityType="sap.com.cds_zc_anacpteclient.ZC_AnaCpteClientType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZC_ANACPTECLIENT_CDS/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZC_ANACPTECLIENT_CDS/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

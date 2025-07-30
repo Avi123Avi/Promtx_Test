@@ -1,0 +1,182 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='CAR')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZC_SUIVIANOCPTABLES_CDS" xml:lang="fr" sap:schema-version="1">
+            <EntityType Name="ZC_SuiviAnoCptablesType" sap:label="Suivi des anomalies comptables" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PointDeVente"/>
+                </Key>
+                <Property Name="PointDeVente" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Point de vente"/>
+                <Property Name="CreateurRAC" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Opérateur RAC ID" sap:value-list="standard"/>
+                <Property Name="CreateurRACNomComplet" Type="Edm.String" MaxLength="81" sap:display-format="UpperCase" sap:label="Opérateur RAC"/>
+                <Property Name="Agent" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Vendeur ID" sap:value-list="standard"/>
+                <Property Name="AgentNomComplet" Type="Edm.String" MaxLength="81" sap:display-format="UpperCase" sap:label="Vendeur"/>
+                <Property Name="CodeRubrique" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:filter-restriction="single-value" sap:label="Code rubrique" sap:value-list="standard"/>
+                <Property Name="RubriqueLibelle" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Libellé rubrique"/>
+                <Property Name="TypeRAC" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Type de RAC"/>
+                <Property Name="NaturePieceRAC" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Nature pièce"/>
+                <Property Name="TypeAnomalieRAC" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Type anomalie"/>
+                <Property Name="DerniereModificationPar" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Dernière modification par" sap:quickinfo="Opérateur ayant effectué la dernière modification"/>
+                <Property Name="VendeurEquipe" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Equipe du vendeur"/>
+                <Property Name="DateDerniereModification" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date de dernière modification"/>
+                <Property Name="HeureDerniereModification" Type="Edm.Time" Precision="0" sap:label="Heure de dernière modification"/>
+                <Property Name="TexteCommentaire" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Commentaire" sap:quickinfo="Texte de commentaire saisi au niveau du masque de rubrique type RAC"/>
+                <Property Name="PaiementMontant" Type="Edm.Decimal" Precision="17" Scale="3" sap:unit="PaiementDevise" sap:label="Montant" sap:quickinfo="Montant saisi pour la rubrique typé RAC"/>
+                <Property Name="PaiementDevise" Type="Edm.String" MaxLength="5" sap:label="Devise moy. paiement" sap:semantics="currency-code"/>
+                <Property Name="VendeurDPX" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="DPX du vendeur"/>
+                <Property Name="VendeurDPXLibelle" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Libellé DPX du vendeur"/>
+                <Property Name="VendeurAdresseMailDPX" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Adresse mail DPX"/>
+                <Property Name="PosteDeVente" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative" sap:filter-restriction="multi-value" sap:label="Poste de vente" sap:quickinfo="Numéro de recette"/>
+                <Property Name="Seance" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Numéro de séance"/>
+                <Property Name="DateSeance" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:filter-restriction="interval" sap:required-in-filter="true" sap:label="Date de séance"/>
+                <Property Name="HeureSeance" Type="Edm.Time" Precision="0" sap:filter-restriction="interval" sap:label="Heure de séance"/>
+                <NavigationProperty Name="to_Agent" Relationship="ZC_SUIVIANOCPTABLES_CDS.assoc_4EFB8F4D581D1E2A001976078223F93B" FromRole="FromRole_assoc_4EFB8F4D581D1E2A001976078223F93B" ToRole="ToRole_assoc_4EFB8F4D581D1E2A001976078223F93B"/>
+                <NavigationProperty Name="to_CreateurRAC" Relationship="ZC_SUIVIANOCPTABLES_CDS.assoc_3654B642BDC55C79FC3A4CBC88B0B425" FromRole="FromRole_assoc_3654B642BDC55C79FC3A4CBC88B0B425" ToRole="ToRole_assoc_3654B642BDC55C79FC3A4CBC88B0B425"/>
+                <NavigationProperty Name="to_RubF4" Relationship="ZC_SUIVIANOCPTABLES_CDS.assoc_AA2D402824995F03CA1D414DB70C3FDB" FromRole="FromRole_assoc_AA2D402824995F03CA1D414DB70C3FDB" ToRole="ToRole_assoc_AA2D402824995F03CA1D414DB70C3FDB"/>
+            </EntityType>
+            <EntityType Name="ZI_AgentF4Type" sap:label="Aide a la saisie pour agent" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="agent"/>
+                </Key>
+                <Property Name="agent" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Identifiant"/>
+                <Property Name="nom" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Nom"/>
+                <Property Name="prenom" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Prénom"/>
+                <Property Name="idagent" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="ID Agent"/>
+            </EntityType>
+            <EntityType Name="ZI_SousRubriqueF4Type" sap:label="Sous Rubrique Value Help" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="clesousrubrique"/>
+                </Key>
+                <Property Name="clesousrubrique" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="UpperCase" sap:label="Rubrique"/>
+                <Property Name="debutvalidite" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Début validité"/>
+                <Property Name="finvalidite" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Fin validité"/>
+                <Property Name="libellecourt" Type="Edm.String" MaxLength="16" sap:display-format="UpperCase" sap:label="Libellé court"/>
+                <Property Name="libellelong" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="Libellé long"/>
+            </EntityType>
+            <Association Name="assoc_3654B642BDC55C79FC3A4CBC88B0B425" sap:content-version="1">
+                <End Type="ZC_SUIVIANOCPTABLES_CDS.ZC_SuiviAnoCptablesType" Multiplicity="1" Role="FromRole_assoc_3654B642BDC55C79FC3A4CBC88B0B425"/>
+                <End Type="ZC_SUIVIANOCPTABLES_CDS.ZI_AgentF4Type" Multiplicity="0..1" Role="ToRole_assoc_3654B642BDC55C79FC3A4CBC88B0B425"/>
+            </Association>
+            <Association Name="assoc_AA2D402824995F03CA1D414DB70C3FDB" sap:content-version="1">
+                <End Type="ZC_SUIVIANOCPTABLES_CDS.ZC_SuiviAnoCptablesType" Multiplicity="1" Role="FromRole_assoc_AA2D402824995F03CA1D414DB70C3FDB"/>
+                <End Type="ZC_SUIVIANOCPTABLES_CDS.ZI_SousRubriqueF4Type" Multiplicity="0..1" Role="ToRole_assoc_AA2D402824995F03CA1D414DB70C3FDB"/>
+            </Association>
+            <Association Name="assoc_4EFB8F4D581D1E2A001976078223F93B" sap:content-version="1">
+                <End Type="ZC_SUIVIANOCPTABLES_CDS.ZC_SuiviAnoCptablesType" Multiplicity="1" Role="FromRole_assoc_4EFB8F4D581D1E2A001976078223F93B"/>
+                <End Type="ZC_SUIVIANOCPTABLES_CDS.ZI_AgentF4Type" Multiplicity="0..1" Role="ToRole_assoc_4EFB8F4D581D1E2A001976078223F93B"/>
+            </Association>
+            <EntityContainer Name="ZC_SUIVIANOCPTABLES_CDS_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZC_SuiviAnoCptables" EntityType="ZC_SUIVIANOCPTABLES_CDS.ZC_SuiviAnoCptablesType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+                <EntitySet Name="ZI_AgentF4" EntityType="ZC_SUIVIANOCPTABLES_CDS.ZI_AgentF4Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZI_SousRubriqueF4" EntityType="ZC_SUIVIANOCPTABLES_CDS.ZI_SousRubriqueF4Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_4EFB8F4D581D1E2A001976078223F93B" Association="ZC_SUIVIANOCPTABLES_CDS.assoc_4EFB8F4D581D1E2A001976078223F93B" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_SuiviAnoCptables" Role="FromRole_assoc_4EFB8F4D581D1E2A001976078223F93B"/>
+                    <End EntitySet="ZI_AgentF4" Role="ToRole_assoc_4EFB8F4D581D1E2A001976078223F93B"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_AA2D402824995F03CA1D414DB70C3FDB" Association="ZC_SUIVIANOCPTABLES_CDS.assoc_AA2D402824995F03CA1D414DB70C3FDB" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_SuiviAnoCptables" Role="FromRole_assoc_AA2D402824995F03CA1D414DB70C3FDB"/>
+                    <End EntitySet="ZI_SousRubriqueF4" Role="ToRole_assoc_AA2D402824995F03CA1D414DB70C3FDB"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_3654B642BDC55C79FC3A4CBC88B0B425" Association="ZC_SUIVIANOCPTABLES_CDS.assoc_3654B642BDC55C79FC3A4CBC88B0B425" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_SuiviAnoCptables" Role="FromRole_assoc_3654B642BDC55C79FC3A4CBC88B0B425"/>
+                    <End EntitySet="ZI_AgentF4" Role="ToRole_assoc_3654B642BDC55C79FC3A4CBC88B0B425"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZC_SUIVIANOCPTABLES_CDS.ZC_SuiviAnoCptablesType/CreateurRAC">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Aide a la saisie pour agent"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_AgentF4"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CreateurRAC"/>
+                                    <PropertyValue Property="ValueListProperty" String="agent"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="nom"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="prenom"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="idagent"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZC_SUIVIANOCPTABLES_CDS.ZC_SuiviAnoCptablesType/Agent">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Aide a la saisie pour agent"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_AgentF4"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Agent"/>
+                                    <PropertyValue Property="ValueListProperty" String="agent"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="nom"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="prenom"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="idagent"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZC_SUIVIANOCPTABLES_CDS.ZC_SuiviAnoCptablesType/CodeRubrique">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Sous Rubrique Value Help"/>
+                        <PropertyValue Property="CollectionPath" String="ZI_SousRubriqueF4"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CodeRubrique"/>
+                                    <PropertyValue Property="ValueListProperty" String="clesousrubrique"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="debutvalidite"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="finvalidite"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="libellecourt"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="libellelong"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZC_SUIVIANOCPTABLES_CDS/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZC_SUIVIANOCPTABLES_CDS/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
