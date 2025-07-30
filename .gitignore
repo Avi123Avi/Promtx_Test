@@ -1,3 +1,10 @@
-/vendor
 build/
+.nyc_output/
+dist/
+
+# Intellij
+.idea/
+*.iml
+
+# NPM
 node_modules/
